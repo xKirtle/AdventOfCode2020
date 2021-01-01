@@ -7,18 +7,6 @@ namespace AdventOfCode
 {
     public class Day5
     {
-        private static string[] handleInput()
-        {
-            string[] seats;
-
-            string path = @"C:\Users\Kirtle\Documents\aoc\inputDay5.txt";
-            using (StreamReader streamReader = new StreamReader(path, Encoding.UTF8))
-            {
-                seats = streamReader.ReadToEnd().Split("\r\n");
-                return seats;
-            }
-        }
-
         private static int getSeatID(string seat)
         {
             int row;
@@ -51,7 +39,7 @@ namespace AdventOfCode
 
         public static void Part1()
         {
-            string[] seats = handleInput();
+            string[] seats = Program.handleInput(5);
             int highestSeatID = 0;
             
             foreach (string seat in seats)
@@ -69,7 +57,7 @@ namespace AdventOfCode
         {
             bool[] seatExists = new bool[128 * 8];
 
-            string[] seats = handleInput();
+            string[] seats = Program.handleInput(5);
             foreach (string seat in seats)
             {
                 int seatID = getSeatID(seat);

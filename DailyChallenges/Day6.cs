@@ -7,21 +7,9 @@ namespace AdventOfCode
 {
     public class Day6
     {
-        private static string[] handleInput()
-        {
-            string[] inputs;
-
-            string path = @"C:\Users\Kirtle\Documents\aoc\inputDay6.txt";
-            using (StreamReader streamReader = new StreamReader(path, Encoding.UTF8))
-            {
-                inputs = streamReader.ReadToEnd().Split("\r\n\r\n");
-                return inputs;
-            }
-        }
-        
         public static void Part1()
         {
-            string[] inputs = handleInput();
+            string[] inputs = Program.handleInput(6);
             int sumOfTrueQuestions = 0;
             
             foreach (string input in inputs)
@@ -43,7 +31,7 @@ namespace AdventOfCode
 
         public static void Part2()
         {
-            string[] inputs = handleInput();
+            string[] inputs = Program.handleInput(6);
             int sumOfTrueQuestions = 0;
             
             foreach (string input in inputs)

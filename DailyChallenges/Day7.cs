@@ -9,18 +9,6 @@ namespace AdventOfCode
 {
     public class Day7
     {
-        private static string[] handleInput()
-        {
-            string[] inputs;
-
-            string path = @"C:\Users\Kirtle\Documents\aoc\inputDay7.txt";
-            using (StreamReader streamReader = new StreamReader(path, Encoding.UTF8))
-            {
-                inputs = streamReader.ReadToEnd().Split("\r\n");
-                return inputs;
-            }
-        }
-
         private static Dictionary<string, Tuple<string[], int[]>> inputToRulesDictionary(string[] rules)
         {
             //shiny purple bags contain 2 posh silver bags, 3 striped silver bags, 5 shiny beige bags, 2 plaid chartreuse bags.
@@ -53,7 +41,7 @@ namespace AdventOfCode
 
         public static void Part1()
         {
-            Dictionary<string, Tuple<string[], int[]>> bagRules = inputToRulesDictionary(handleInput());
+            Dictionary<string, Tuple<string[], int[]>> bagRules = inputToRulesDictionary(Program.handleInput(7));
             int bagContainingShinyGold = 0;
             foreach (KeyValuePair<string, Tuple<string[], int[]>> rule in bagRules)
             {
@@ -82,7 +70,7 @@ namespace AdventOfCode
 
         public static void Part2()
         {
-            Dictionary<string, Tuple<string[], int[]>> bagRules = inputToRulesDictionary(handleInput());
+            Dictionary<string, Tuple<string[], int[]>> bagRules = inputToRulesDictionary(Program.handleInput(7));
             int bagContainingShinyGold = 0;
             Queue<Tuple<string, int>> queue = new Queue<Tuple<string, int>>();
             Tuple<string, int> startingTuple = new Tuple<string, int>("shiny gold", 1);

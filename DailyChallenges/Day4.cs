@@ -8,21 +8,9 @@ namespace AdventOfCode
 {
     public class Day4
     {
-        private static string[] handleInput()
-        {
-            string[] passports;
-
-            string path = @"C:\Users\Kirtle\Documents\aoc\input.txt";
-            using (StreamReader streamReader = new StreamReader(path, Encoding.UTF8))
-            {
-                passports = streamReader.ReadToEnd().Split("\r\n\r\n");
-                return passports;
-            }
-        }
-
         public static void Part1()
         {
-            string[] passports = handleInput();
+            string[] passports = Program.handleInput(4);
             string[] requiredFields = {"byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid"};
 
             int validPassports = 0;
@@ -42,7 +30,7 @@ namespace AdventOfCode
 
         public static void Part2()
         {
-            string[] passports = handleInput();
+            string[] passports = Program.handleInput(4);
             string[] requiredFields = {"byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid"};
 
             int validPassports = 0;

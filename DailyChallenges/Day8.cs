@@ -6,21 +6,9 @@ namespace AdventOfCode
 {
     public class Day8
     {
-        private static string[] handleInput()
-        {
-            string[] inputs;
-
-            string path = "/home/kirtle/Documents/GitHub/AdventOfCode/Input/InputDay8.txt";
-            using (StreamReader streamReader = new StreamReader(path, Encoding.UTF8))
-            {
-                inputs = streamReader.ReadToEnd().Split("\n");
-                return inputs;
-            }
-        }
-
         public static void Part1()
         {
-            string[] input = handleInput();
+            string[] input = Program.handleInput(8);
             bool[] executed = new bool[input.Length];
             int accumulator = 0;
             int index = 0;
@@ -61,7 +49,7 @@ namespace AdventOfCode
 
         public static void Part2()
         {
-            string[] input = handleInput();
+            string[] input = Program.handleInput(8);
             bool[] executed = new bool[input.Length];
             int accumulator = 0;
             int index = 0;
