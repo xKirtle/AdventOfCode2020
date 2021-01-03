@@ -8,7 +8,7 @@ namespace AdventOfCode
     {
         static void Main(string[] args)
         {
-            Day7.Part1();
+            Day3.Part2();
         }
         
         public static string[] handleInput(int day, bool linux = true)
